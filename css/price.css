@@ -286,6 +286,11 @@ h4 {
   margin-bottom: 48px;
 }
 
+.second-sec .plan-active {
+  background: #56C4C5;
+  color: #fff;
+}
+
 .second-sec .second-plan {
   width: 81%;
   margin: 0 auto;
@@ -312,7 +317,14 @@ h4 {
 
 .second-sec .second-plan .btn-plan:hover {
   cursor: pointer;
-  opacity: 0.5;
+  font-weight: bold;
+  color: #FFFFFF;
+  border: 2px solid black;
+  background: #56C4C5;
+}
+
+.second-sec .second-plan .btn-plan p {
+  display: inline-block;
 }
 
 .second-sec .two-cards {
@@ -361,7 +373,8 @@ h4 {
   font: normal normal normal 12px/17px Noto Sans TC;
 }
 
-.second-sec .two-cards .plan-to-charge .text-change {
+.second-sec .two-cards .plan-to-charge .text-change-basic-charge, .second-sec .two-cards .plan-to-charge .text-change-normal-charge, .second-sec .two-cards .plan-to-charge .text-change-subscribe {
+  display: inline-block;
   padding-top: 8px;
   font: normal normal normal 32px/35px Comfortaa;
 }

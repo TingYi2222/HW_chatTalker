@@ -154,6 +154,12 @@ h4{font: normal normal normal 18px/28px Noto Sans TC;}
     h2{
         margin-bottom: 48px;
     }
+
+    .plan-active{
+        background: #56C4C5;
+        color: #fff;
+    }
+
     .second-plan{
         width: 81%;
         margin: 0 auto;
@@ -172,7 +178,13 @@ h4{font: normal normal normal 18px/28px Noto Sans TC;}
             text-decoration: none;
             &:hover {
                 cursor: pointer;
-                opacity: 0.5;
+                font-weight: bold;
+                color: #FFFFFF;
+                border: 2px solid black;
+                background: #56C4C5;
+            }
+            p{
+                display: inline-block;
             }
         }
     }
@@ -204,7 +216,8 @@ h4{font: normal normal normal 18px/28px Noto Sans TC;}
                 border-radius: 12px;
                 font: normal normal normal 12px/17px Noto Sans TC;
             }
-            .text-change{
+            .text-change-basic-charge, .text-change-normal-charge, .text-change-subscribe{
+                display: inline-block;
                 padding-top: 8px;
                 font: normal normal normal 32px/35px Comfortaa;
             }

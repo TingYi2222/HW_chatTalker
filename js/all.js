@@ -34,4 +34,39 @@ $(document).ready(function () {
     $('.top-btn').click(function(e){
         $('html').animate({scrollTop:0},200);
     })
+
+    $('.btn-plan').click(function(e){
+        e.preventDefault();
+        var str = $(this).find('p').text();
+        $("p.text-change-subscribe").text(str)
+
+        $(this).addClass('plan-active')
+        $(this).parent().siblings().find('.btn-plan').removeClass('plan-active')
+    })
+
+    $('.charge1').click(function(e){
+        e.preventDefault();
+        $("p.text-change-basic-charge").text('600')
+        $("p.text-change-normal-charge").text('1600')
+    })
+    $('.charge2').click(function(e){
+        e.preventDefault();
+        $("p.text-change-basic-charge").text('875')
+        $("p.text-change-normal-charge").text('2300')
+    })
+    $('.charge3').click(function(e){
+        e.preventDefault();
+        $("p.text-change-basic-charge").text('1150')
+        $("p.text-change-normal-charge").text('2950')
+    })
+    $('.charge4').click(function(e){
+        e.preventDefault();
+        $("p.text-change-basic-charge").text('1300')
+        $("p.text-change-normal-charge").text('3450')
+    })
+    $('.charge5').click(function(e){
+        e.preventDefault();
+        $("p.text-change-basic-charge").text('1500')
+        $("p.text-change-normal-charge").text('3000')
+    })
 });
