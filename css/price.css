@@ -1,3 +1,481 @@
-h1{
-    color:red;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+sub {
+  font-weight: bold;
+  font-size: small;
+}
+
+.top-shadow {
+  height: 470px;
+  background-color: #F7F9FD;
+  border-radius: 0px 0px 0px 300px;
+  margin-bottom: 89px;
+}
+
+@media (max-width: 768px) {
+  .top-shadow {
+    height: 495px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-shadow {
+    height: 567px;
+  }
+}
+
+.bg-setting {
+  width: 100%;
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner.svg) no-repeat top right/auto 559px;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .bg-setting {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner.svg) no-repeat top right/auto 480px;
+  }
+}
+
+@media (max-width: 376px) {
+  .bg-setting {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner_sm.svg) no-repeat top 72px right/100vw;
+  }
+}
+
+.bg-setting-ball {
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg) no-repeat top 300px left -40%/361px 361px;
+}
+
+.wrap {
+  max-width: 1128px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  font: normal normal bold 48px/70px Noto Sans TC;
+}
+
+h2 {
+  font: normal normal bold 32px/46px Noto Sans TC;
+}
+
+h3 {
+  font: normal normal bold 24px/35px Noto Sans TC;
+}
+
+h4 {
+  font: normal normal normal 18px/28px Noto Sans TC;
+}
+
+.card-form {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  -webkit-box-shadow: 0px 2px 10px #00000014;
+          box-shadow: 0px 2px 10px #00000014;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .card-form {
+    margin-bottom: 24px;
+  }
+}
+
+.button-green {
+  font: normal normal normal 18px Comfortaa;
+  border-radius: 27px;
+  border: 0;
+  width: 136px;
+  padding: 12px 0;
+  color: #FFFFFF;
+  background-color: #56C4C5;
+}
+
+.button-green:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.top-btn {
+  font: normal normal bold 18px/19px Wendy One;
+  border-radius: 50%;
+  width: 71px;
+  height: 71px;
+  position: fixed;
+  right: 48px;
+  bottom: 24px;
+  z-index: 5;
+}
+
+@media (max-width: 768px) {
+  .top-btn {
+    width: 50px;
+    height: 50px;
+    right: 24px;
+    bottom: 24px;
+  }
+}
+
+.button-orangered {
+  font: normal normal normal 16px/24px Noto Sans TC;
+  border-radius: 22px;
+  border: 0;
+  width: 128px;
+  padding: 8px 0;
+  color: #FFFFFF;
+  background-color: #FF5D50;
+}
+
+.button-orangered:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px 20px;
+  margin-bottom: 92px;
+}
+
+.header img {
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    background-color: white;
+    border-bottom: solid 2px #747474;
+  }
+}
+
+@media (max-width: 568px) {
+  .header {
+    margin-bottom: 0;
+  }
+  .header img {
+    display: inline-block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 24px;
+    margin: 8px 0;
+  }
+  .header button {
+    padding: 8px 0;
+  }
+}
+
+.first-sec {
+  padding: 0 20px 280px 20px;
+  text-align: left;
+}
+
+.first-sec h1 {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .first-sec {
+    padding: 140px 20px 140px 20px;
+  }
+}
+
+@media (max-width: 568px) {
+  .first-sec {
+    padding: 300px 20px 140px 20px;
+  }
+  .first-sec h1 {
+    font: normal normal bold 32px/46px Noto Sans TC;
+  }
+  .first-sec p {
+    font: normal normal bold 16px/24px Noto Sans TC;
+  }
+}
+
+@media (max-width: 376px) {
+  .first-sec {
+    padding: 48px 20px 401px 20px;
+  }
+}
+
+.second-sec {
+  width: 83.548%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.second-sec h2 {
+  margin-bottom: 48px;
+}
+
+.second-sec .second-plan {
+  width: 81%;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+.second-sec .second-plan .btn-plan {
+  font: normal normal normal 18px/26px Comfortaa;
+  padding: 11px 32.5px;
+  border: 1px solid #56C4C5;
+  border-radius: 27px;
+  display: block;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.second-sec .second-plan .btn-plan:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.second-sec .two-cards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.second-sec .two-cards .card-form {
+  width: 48.845%;
+  padding-bottom: 32px;
+}
+
+.second-sec .two-cards .card-form h3 {
+  padding: 10px 0 16px 0;
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 32px;
+}
+
+.second-sec .two-cards .plan-to-charge {
+  padding: 32px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.second-sec .two-cards .plan-to-charge .shadow {
+  width: 38.063%;
+  background-color: #F5F5F5;
+  padding: 24px 0 18px 0;
+  border-radius: 12px;
+  font: normal normal normal 12px/17px Noto Sans TC;
+}
+
+.second-sec .two-cards .plan-to-charge .text-change {
+  padding-top: 8px;
+  font: normal normal normal 32px/35px Comfortaa;
+}
+
+.second-sec .two-cards .plan-to-charge .color-change {
+  color: #56C4C5;
+}
+
+.second-sec .two-cards .plan-to-charge .equal {
+  font: normal normal normal 29px/42px Noto Sans TC;
+}
+
+.second-sec .two-cards .t-a-left {
+  text-align: left;
+  background: url(http://localhost:8080/Github/HW_chatTalker/chatTalker_images/checkmark-outline.svg) top left 30px no-repeat;
+  padding: 0 0 16px 61.5px;
+}
+
+.second-sec .two-cards .button-green {
+  margin: 16px 0;
+}
+
+@media (max-width: 768px) {
+  .second-sec {
+    width: 100%;
+  }
+  .second-sec h2 {
+    margin-bottom: 24px;
+  }
+  .second-sec .second-plan {
+    width: 80%;
+    margin-bottom: 32px;
+    gap: 6px;
+  }
+  .second-sec .second-plan .btn-plan {
+    font: normal normal normal 16px/24px Comfortaa;
+    padding: 8px 16px;
+  }
+  .second-sec .two-cards {
+    width: 89.33%;
+    margin: 0 auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .second-sec .two-cards .card-form {
+    width: 100%;
+    padding-bottom: 24px;
+  }
+  .second-sec .two-cards h3 {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+  .second-sec .two-cards .plan-to-charge {
+    padding: 24px 0 27px 0;
+  }
+  .second-sec .shadow {
+    width: 41.5%;
+  }
+}
+
+@media (max-width: 568px) {
+  .second-sec .second-plan {
+    width: 89.33%;
+  }
+  .second-sec h2 {
+    font: normal normal bold 28px/40px Noto Sans TC;
+  }
+}
+
+.third-sec {
+  width: 83.088%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.third-sec h2 {
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+.third-sec .card-form {
+  margin-top: 16px;
+}
+
+.third-sec .card-top-part h4 {
+  padding: 16px 0;
+}
+
+.third-sec .card-top-part .minus {
+  display: none;
+}
+
+.third-sec p {
+  font: normal normal normal 16px/32px Noto Sans TC;
+}
+
+.third-sec .accordion-button::after {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_plus.svg);
+}
+
+.third-sec .accordion-button:not(.collapsed) {
+  color: #56C4C5;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 12px;
+}
+
+.third-sec .accordion-button:not(.collapsed)::after {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/icon_minus.svg);
+}
+
+.third-sec .accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.third-sec .accordion-button {
+  border-radius: 12px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  font: normal normal normal 16px/24px Noto Sans TC;
+  padding: 16px 0;
+  background-color: #F5F5F5;
+}
+/*# sourceMappingURL=price.css.map */

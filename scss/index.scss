@@ -1,0 +1,404 @@
+@import "variables.scss";
+@import "reset.scss";
+
+
+
+.bg-setting{
+    background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg) no-repeat top 118px right 12.86%/ auto 69vh,
+    url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg) no-repeat top right/ auto 100vh,
+    url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg) top 78.5vh left -13.18vw no-repeat,
+    url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg) top 220vh right -7.32vw no-repeat,
+    url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg) top 340vh left no-repeat;
+    z-index: -1;
+    @media (max-width:768px) {
+        background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg) no-repeat top 320px center/ auto 50vh,
+        url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg) no-repeat top right/ auto 100vh,
+        url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg) no-repeat top 85vh left -13.18vw / 240px 240px,
+        url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg) no-repeat top 280vh right -7.32vw / 240px 240px ,
+        url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg) top 312vh left 3.66vw no-repeat;  
+    }
+    @media (max-width:568px) {
+        background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg) no-repeat top 320px center/ auto 50vh,
+        url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home_sm.svg) no-repeat top 58vh right/ 100vw auto,
+        url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg) no-repeat top 115vh left -22vw / 126px 126px,
+        url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg) no-repeat top 426vh right -10vw / 135px 135px ,
+        url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg) no-repeat top 668vh left -20vw / 160px 160px ;  
+    }
+}
+
+.wrap{
+    max-width: 1128px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+h1{font: normal normal bold 48px/70px Noto Sans TC;}
+h2{font: normal normal bold 18px/26px Noto Sans TC;}
+h3{font: normal normal bold 16px/24px Noto Sans TC;}
+h4{font: normal normal bold 32px/46px Noto Sans TC;}
+h5{font: normal normal bold 24px/35px Noto Sans TC;}
+.card-form{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+}
+.button-green{
+    font: normal normal normal 18px Comfortaa;
+    border-radius: 27px;
+    border: 0;
+    width: 136px;
+    padding: 12px 0;
+    color: #FFFFFF;
+    background-color: $bluegreen;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+}
+.top-btn{
+    font: normal normal bold 18px/19px Wendy One;
+    border-radius: 50%;
+    width: 71px;
+    height: 71px;
+    position: fixed;
+    right: 48px;
+    bottom: 24px;
+}
+.button-orangered{
+    font: normal normal normal 16px/24px Noto Sans TC;
+    border-radius: 22px;
+    border: 0;
+    width: 128px;
+    padding: 8px 0;
+    color: #FFFFFF;
+    background-color: $orangered;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    margin-bottom: 188px;
+    img{
+        height: 40px;
+    }
+    @media (max-width:768px) {
+        margin-bottom: 20px;
+    }
+    @media (max-width:568px) {
+        img{
+            display: inline-block;
+            align-items: center;
+            height: 24px;
+            margin: 8px 0;
+        }
+        button{
+            padding: 8px 0;
+        }
+    }
+}
+
+.topic{
+    text-align: left;
+    h2{
+        margin-bottom: 8px;
+        color: $bluegreen;
+    }
+    h1{
+        margin-bottom: 16px;
+    }
+    p{font: normal normal normal 20px/29px Noto Sans TC;}
+
+    @media (max-width:568px) {
+        h2{
+            font: normal normal bold 16px/24px Noto Sans TC;
+        }
+        h1{
+            font: normal normal bold 32px/46px Noto Sans TC;
+        }
+        p{
+            font: normal normal normal 16px/24px Noto Sans TC;
+        }
+    }
+}
+
+.first-part{
+    max-width: 969px;
+    margin: 0 auto;
+    margin-top: 280px;
+    text-align: center;
+    h4{
+        padding-bottom: 48px;
+    }
+    img{
+        width: 90px;
+        height: 90px;
+        margin-bottom: 24px;
+    }
+    p{
+        font: normal normal normal 16px/24px Noto Sans TC;
+    }
+    ul{
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+    @media (max-width:768px) {
+        margin-top: 500px;
+        h4{
+            padding-bottom: 32px;
+        }
+        ul{
+            flex-wrap: wrap;
+            justify-content: center;
+            gap:10%
+        }
+        li{
+            margin-bottom: 24px;
+            img{
+                margin-bottom: 16px;
+            }
+            h5{
+                padding-bottom: 16px;
+            }
+        }
+    }
+
+    @media (max-width:568px) {
+        ul{
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.second-part{
+    width: 100%;
+    text-align: center;
+
+    h4{padding-bottom: 16px;}
+
+    p{padding-bottom: 48px;}
+
+    img{border-radius: 12px 12px 0px 0px;}
+
+    ul{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+        margin-bottom: 100px;
+    }
+    li{
+        width: 23.897%;
+        h3{
+            color: $bluegreen;
+            padding: 16px 0;
+        }
+        p{
+            font: normal normal normal 16px/24px Noto Sans TC;
+            padding: 0 16px 24px 16px;
+        }
+    }
+    @media (max-width:768px) {
+        ul{
+            flex-wrap: wrap;
+        }
+        li{
+            width: 48%;
+        }
+    }
+
+    @media (max-width:568px) {
+        h4{
+            font: normal normal bold 28px/40px Noto Sans TC;
+        }
+        p{
+            padding-bottom: 24px;
+        }
+        ul{
+            justify-content: center;
+            margin-bottom: 60px;
+            gap: 0;
+            li{
+                width: 70%;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+.third-part{
+    max-width: 1039px;
+    margin-bottom: 100px;
+    display: flex;
+    ul{
+        width: 53.32%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px 0;
+        li{
+            width: 41.516%;
+            padding:32px 32px 48px 32px;
+            text-align: left;
+            margin-right: 8.484%;
+            .sm-pic{
+                padding: 22px;
+                border-radius: 43px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 2px 10px #00000014;
+                margin-bottom: 24px;
+            }
+        }
+        p{
+            font: normal normal normal 16px/24px Noto Sans TC;
+            max-width: 166px;
+        }
+    }
+    .third-button-part{
+        margin-top: 156px;
+        margin-left: 8.662%;
+        width: 38%;
+
+        h4{
+            max-width: 256px;
+        }
+        p{
+            max-width: 395px;
+            margin: 16px 0 24px 0;
+        }
+    }
+    @media (max-width:768px) {
+        flex-direction: column-reverse;
+        ul{
+            width: 100%;
+            gap: 10%;
+            li{
+                width: 45%;
+                margin-right: 0;
+                margin-bottom: 24px;
+            }
+        }
+
+        .third-button-part{
+            width: 100%;
+            margin: 0;
+            margin-bottom: 32px;
+            p, h4{
+                text-align: center;
+                margin: 0 auto;
+                padding-bottom: 16px;
+            }
+            button{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @media (max-width:568px) {
+        gap: 0;
+        ul{
+            justify-content: center;
+            li{
+                width: 70%;
+            }
+        }
+    }
+}
+
+.fourth-part{
+    margin-bottom: 134px;
+    text-align: center;
+    h4{
+        margin-bottom: 104px;
+    }
+    ul{
+        width: 100%;
+        display: flex;
+        gap: 1.25%;
+    }
+
+    li{
+        font: normal normal normal 16px/24px Noto Sans TC;
+        text-align: left;
+        width: 32.45%;
+        padding: 48px 32px 24px 32px;
+        position: relative;
+        .card-content{
+            padding-bottom: 24px;
+            border-bottom: 1px solid #DDDDDD;
+            margin-bottom: 24px;
+            letter-spacing: 0px;
+        }
+        .fb-man{
+            width: 80px;height: 80px;
+            border-radius: 40px;
+            box-shadow: 0px 2px 10px #00000014;
+            position: absolute;
+            left: 32px;
+            top: -50px;
+        }
+        .job-title{
+            display:inline-block;
+        }
+        .level-star{
+            float: right;
+        }
+        h3{
+            letter-spacing: 0px;
+            color: #221E1F;
+        }
+    }
+    @media (max-width:768px) {
+        margin-bottom: 94px;
+        ul{
+            flex-wrap: wrap;
+            justify-content: center;
+            li{
+                width: 60%;
+                margin-bottom: 72px;
+            }
+        }
+    }
+
+    @media (max-width:568px) {
+        ul{
+            li{
+                width: 90%;
+                margin-bottom: 72px;
+            }
+        }
+    }
+}
+
+.fifth-part{
+    max-width: 100%;
+    height: 503px;
+    text-align: center;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    h4{
+        padding: 260px 0 48px 0;
+    }
+    @media (max-width:568px) {
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/footer_sm.svg);
+        h4{
+            font: normal normal bold 24px/35px Noto Sans TC;
+        }
+    }
+}
+
+.footer{
+    text-align: center;
+    p{
+    font: normal normal normal 16px/24px Noto Sans TC;
+    padding: 16px 0;
+    background-color: $lightgray;
+    }
+}

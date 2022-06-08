@@ -1,4 +1,570 @@
-h1{
-    color: aqua;
-    font-size: 24px;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: x-small;
+}
+
+.bg-setting {
+  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg) no-repeat top 118px right 12.86%/auto 69vh, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg) no-repeat top right/auto 100vh, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg) top 78.5vh left -13.18vw no-repeat, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg) top 220vh right -7.32vw no-repeat, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg) top 340vh left no-repeat;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .bg-setting {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg) no-repeat top 320px center/auto 50vh, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home.svg) no-repeat top right/auto 100vh, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg) no-repeat top 85vh left -13.18vw/240px 240px, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg) no-repeat top 280vh right -7.32vw/240px 240px, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg) top 312vh left 3.66vw no-repeat;
+  }
+}
+
+@media (max-width: 568px) {
+  .bg-setting {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home.svg) no-repeat top 320px center/auto 50vh, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/bg_home_sm.svg) no-repeat top 58vh right/100vw auto, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball01.svg) no-repeat top 115vh left -22vw/126px 126px, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball02.svg) no-repeat top 426vh right -10vw/135px 135px, url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg) no-repeat top 668vh left -20vw/160px 160px;
+  }
+}
+
+.wrap {
+  max-width: 1128px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  font: normal normal bold 48px/70px Noto Sans TC;
+}
+
+h2 {
+  font: normal normal bold 18px/26px Noto Sans TC;
+}
+
+h3 {
+  font: normal normal bold 16px/24px Noto Sans TC;
+}
+
+h4 {
+  font: normal normal bold 32px/46px Noto Sans TC;
+}
+
+h5 {
+  font: normal normal bold 24px/35px Noto Sans TC;
+}
+
+.card-form {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  -webkit-box-shadow: 0px 2px 10px #00000014;
+          box-shadow: 0px 2px 10px #00000014;
+  border-radius: 12px;
+}
+
+.button-green {
+  font: normal normal normal 18px Comfortaa;
+  border-radius: 27px;
+  border: 0;
+  width: 136px;
+  padding: 12px 0;
+  color: #FFFFFF;
+  background-color: #56C4C5;
+}
+
+.button-green:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.top-btn {
+  font: normal normal bold 18px/19px Wendy One;
+  border-radius: 50%;
+  width: 71px;
+  height: 71px;
+  position: fixed;
+  right: 48px;
+  bottom: 24px;
+}
+
+.button-orangered {
+  font: normal normal normal 16px/24px Noto Sans TC;
+  border-radius: 22px;
+  border: 0;
+  width: 128px;
+  padding: 8px 0;
+  color: #FFFFFF;
+  background-color: #FF5D50;
+}
+
+.button-orangered:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px 0;
+  margin-bottom: 188px;
+}
+
+.header img {
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 568px) {
+  .header img {
+    display: inline-block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 24px;
+    margin: 8px 0;
+  }
+  .header button {
+    padding: 8px 0;
+  }
+}
+
+.topic {
+  text-align: left;
+}
+
+.topic h2 {
+  margin-bottom: 8px;
+  color: #56C4C5;
+}
+
+.topic h1 {
+  margin-bottom: 16px;
+}
+
+.topic p {
+  font: normal normal normal 20px/29px Noto Sans TC;
+}
+
+@media (max-width: 568px) {
+  .topic h2 {
+    font: normal normal bold 16px/24px Noto Sans TC;
+  }
+  .topic h1 {
+    font: normal normal bold 32px/46px Noto Sans TC;
+  }
+  .topic p {
+    font: normal normal normal 16px/24px Noto Sans TC;
+  }
+}
+
+.first-part {
+  max-width: 969px;
+  margin: 0 auto;
+  margin-top: 280px;
+  text-align: center;
+}
+
+.first-part h4 {
+  padding-bottom: 48px;
+}
+
+.first-part img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 24px;
+}
+
+.first-part p {
+  font: normal normal normal 16px/24px Noto Sans TC;
+}
+
+.first-part ul {
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .first-part {
+    margin-top: 500px;
+  }
+  .first-part h4 {
+    padding-bottom: 32px;
+  }
+  .first-part ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10%;
+  }
+  .first-part li {
+    margin-bottom: 24px;
+  }
+  .first-part li img {
+    margin-bottom: 16px;
+  }
+  .first-part li h5 {
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 568px) {
+  .first-part ul {
+    margin-bottom: 60px;
+  }
+}
+
+.second-part {
+  width: 100%;
+  text-align: center;
+}
+
+.second-part h4 {
+  padding-bottom: 16px;
+}
+
+.second-part p {
+  padding-bottom: 48px;
+}
+
+.second-part img {
+  border-radius: 12px 12px 0px 0px;
+}
+
+.second-part ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 16px;
+  margin-bottom: 100px;
+}
+
+.second-part li {
+  width: 23.897%;
+}
+
+.second-part li h3 {
+  color: #56C4C5;
+  padding: 16px 0;
+}
+
+.second-part li p {
+  font: normal normal normal 16px/24px Noto Sans TC;
+  padding: 0 16px 24px 16px;
+}
+
+@media (max-width: 768px) {
+  .second-part ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .second-part li {
+    width: 48%;
+  }
+}
+
+@media (max-width: 568px) {
+  .second-part h4 {
+    font: normal normal bold 28px/40px Noto Sans TC;
+  }
+  .second-part p {
+    padding-bottom: 24px;
+  }
+  .second-part ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 60px;
+    gap: 0;
+  }
+  .second-part ul li {
+    width: 70%;
+    margin-bottom: 24px;
+  }
+}
+
+.third-part {
+  max-width: 1039px;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.third-part ul {
+  width: 53.32%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 28px 0;
+}
+
+.third-part ul li {
+  width: 41.516%;
+  padding: 32px 32px 48px 32px;
+  text-align: left;
+  margin-right: 8.484%;
+}
+
+.third-part ul li .sm-pic {
+  padding: 22px;
+  border-radius: 43px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  -webkit-box-shadow: 0px 2px 10px #00000014;
+          box-shadow: 0px 2px 10px #00000014;
+  margin-bottom: 24px;
+}
+
+.third-part ul p {
+  font: normal normal normal 16px/24px Noto Sans TC;
+  max-width: 166px;
+}
+
+.third-part .third-button-part {
+  margin-top: 156px;
+  margin-left: 8.662%;
+  width: 38%;
+}
+
+.third-part .third-button-part h4 {
+  max-width: 256px;
+}
+
+.third-part .third-button-part p {
+  max-width: 395px;
+  margin: 16px 0 24px 0;
+}
+
+@media (max-width: 768px) {
+  .third-part {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .third-part ul {
+    width: 100%;
+    gap: 10%;
+  }
+  .third-part ul li {
+    width: 45%;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+  .third-part .third-button-part {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+  .third-part .third-button-part p, .third-part .third-button-part h4 {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 16px;
+  }
+  .third-part .third-button-part button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 568px) {
+  .third-part {
+    gap: 0;
+  }
+  .third-part ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .third-part ul li {
+    width: 70%;
+  }
+}
+
+.fourth-part {
+  margin-bottom: 134px;
+  text-align: center;
+}
+
+.fourth-part h4 {
+  margin-bottom: 104px;
+}
+
+.fourth-part ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25%;
+}
+
+.fourth-part li {
+  font: normal normal normal 16px/24px Noto Sans TC;
+  text-align: left;
+  width: 32.45%;
+  padding: 48px 32px 24px 32px;
+  position: relative;
+}
+
+.fourth-part li .card-content {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 24px;
+  letter-spacing: 0px;
+}
+
+.fourth-part li .fb-man {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  -webkit-box-shadow: 0px 2px 10px #00000014;
+          box-shadow: 0px 2px 10px #00000014;
+  position: absolute;
+  left: 32px;
+  top: -50px;
+}
+
+.fourth-part li .job-title {
+  display: inline-block;
+}
+
+.fourth-part li .level-star {
+  float: right;
+}
+
+.fourth-part li h3 {
+  letter-spacing: 0px;
+  color: #221E1F;
+}
+
+@media (max-width: 768px) {
+  .fourth-part {
+    margin-bottom: 94px;
+  }
+  .fourth-part ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .fourth-part ul li {
+    width: 60%;
+    margin-bottom: 72px;
+  }
+}
+
+@media (max-width: 568px) {
+  .fourth-part ul li {
+    width: 90%;
+    margin-bottom: 72px;
+  }
+}
+
+.fifth-part {
+  max-width: 100%;
+  height: 503px;
+  text-align: center;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.fifth-part h4 {
+  padding: 260px 0 48px 0;
+}
+
+@media (max-width: 568px) {
+  .fifth-part {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/footer_sm.svg);
+  }
+  .fifth-part h4 {
+    font: normal normal bold 24px/35px Noto Sans TC;
+  }
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  font: normal normal normal 16px/24px Noto Sans TC;
+  padding: 16px 0;
+  background-color: #F5F5F5;
+}
+/*# sourceMappingURL=index.css.map */
