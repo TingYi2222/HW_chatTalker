@@ -66,4 +66,8 @@ sub {
   font-weight: bold;
   font-size: small;
 }
+
+a {
+  text-decoration: none;
+}
 /*# sourceMappingURL=reset.css.map */

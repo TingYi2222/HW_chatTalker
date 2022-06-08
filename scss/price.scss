@@ -29,7 +29,10 @@
 }
 
 .bg-setting-ball{
-    background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg) no-repeat top 300px left -40% / 361px 361px;
+    background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg) no-repeat top 300px left -25% / 361px 361px;
+    @media (max-width:768px) {
+        background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg) no-repeat top 660px left -25% / 180px 180px; 
+    }
 }
 
 .wrap{
@@ -126,7 +129,7 @@ h4{font: normal normal normal 18px/28px Noto Sans TC;}
     h1{
         margin-bottom: 16px;
     }
-    @media (max-width:768px) {
+    @media (max-width:992px) {
         padding: 140px 20px 140px 20px;
     }
     @media (max-width:568px) {
@@ -186,6 +189,9 @@ h4{font: normal normal normal 18px/28px Noto Sans TC;}
                 margin-bottom: 32px;
             }
         }
+        .brief-intro{
+            font: normal normal bold 16px/24px Noto Sans TC;
+        }
         .plan-to-charge{
             padding: 32px 0;
             display: flex;
@@ -210,6 +216,7 @@ h4{font: normal normal normal 18px/28px Noto Sans TC;}
             }
         }
         .t-a-left{
+            font: normal normal normal 16px/24px Noto Sans TC;
             text-align: left;
             background: url(http://localhost:8080/Github/HW_chatTalker/chatTalker_images/checkmark-outline.svg) top left 30px no-repeat;
             padding:0 0 16px 61.5px;
@@ -233,7 +240,7 @@ h4{font: normal normal normal 18px/28px Noto Sans TC;}
             }
         }
         .two-cards{
-            width: 89.33%;
+            width: 100%;
             margin: 0 auto;
             flex-wrap: wrap;
             .card-form{
@@ -247,11 +254,14 @@ h4{font: normal normal normal 18px/28px Noto Sans TC;}
             .plan-to-charge{
                 padding: 24px 0 27px 0;
             }
+            .t-a-left{
+                font: normal normal normal 14px/20px Noto Sans TC;
+            }
         }
         .shadow{
             width: 41.5%;
-
         }
+
     }
     @media (max-width:568px) {
         .second-plan{
@@ -264,7 +274,7 @@ h4{font: normal normal normal 18px/28px Noto Sans TC;}
 }
 
 .third-sec{
-    width: 83.088%;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 100px;
     h2{
